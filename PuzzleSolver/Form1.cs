@@ -87,7 +87,7 @@ namespace PuzzleSolver
                 "           " +
                 "           "),
                 new SpaceState(
-                "####       " +
+                "###        " +
                 "#00#       " +
                 " #00#      " +
                 "  #00#     " +
@@ -163,7 +163,11 @@ namespace PuzzleSolver
                                 e.Graphics.DrawImage(Properties.Resources.Bottum, block);
 
                             // Draw the name of the block on the block.
-                            e.Graphics.DrawString(game.state.blocks[y * game.w + x].ToString(), new Font("Ariel", 20), new SolidBrush(Color.AliceBlue), block, sf);
+                            if (game.goalBlock == game.state.blocks[y * game.w + x])
+                                e.Graphics.DrawString(game.state.blocks[y * game.w + x].ToString(), new Font("Ariel", 20), new SolidBrush(Color.GreenYellow), block, sf);
+                            else
+                                e.Graphics.DrawString(game.state.blocks[y * game.w + x].ToString(), new Font("Ariel", 20), new SolidBrush(Color.AliceBlue), block, sf);
+
 
                         } // End if block != 0.
 

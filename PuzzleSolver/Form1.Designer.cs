@@ -33,9 +33,9 @@
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blockCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.walkingPuzzleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gamePanel = new MyPanel();
-            this.walkingPuzzleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.solveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(604, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,16 +63,23 @@
             // normalGameToolStripMenuItem
             // 
             this.normalGameToolStripMenuItem.Name = "normalGameToolStripMenuItem";
-            this.normalGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.normalGameToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.normalGameToolStripMenuItem.Text = "Normal Game";
             this.normalGameToolStripMenuItem.Click += new System.EventHandler(this.normalGameToolStripMenuItem_Click);
             // 
             // blockCheckToolStripMenuItem
             // 
             this.blockCheckToolStripMenuItem.Name = "blockCheckToolStripMenuItem";
-            this.blockCheckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.blockCheckToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.blockCheckToolStripMenuItem.Text = "Block Check";
             this.blockCheckToolStripMenuItem.Click += new System.EventHandler(this.blockCheckToolStripMenuItem_Click);
+            // 
+            // walkingPuzzleToolStripMenuItem
+            // 
+            this.walkingPuzzleToolStripMenuItem.Name = "walkingPuzzleToolStripMenuItem";
+            this.walkingPuzzleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.walkingPuzzleToolStripMenuItem.Text = "Walking Puzzle";
+            this.walkingPuzzleToolStripMenuItem.Click += new System.EventHandler(this.walkingPuzzleToolStripMenuItem_Click);
             // 
             // solveToolStripMenuItem
             // 
@@ -83,32 +90,29 @@
             // 
             // gamePanel
             // 
+            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gamePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gamePanel.BackgroundImage")));
+            this.gamePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gamePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gamePanel.Location = new System.Drawing.Point(12, 27);
             this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(400, 500);
+            this.gamePanel.Size = new System.Drawing.Size(580, 685);
             this.gamePanel.TabIndex = 5;
             this.gamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.gamePanel_Paint);
             this.gamePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gamePanel_MouseDown);
             this.gamePanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gamePanel_MouseUp);
             // 
-            // walkingPuzzleToolStripMenuItem
-            // 
-            this.walkingPuzzleToolStripMenuItem.Name = "walkingPuzzleToolStripMenuItem";
-            this.walkingPuzzleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.walkingPuzzleToolStripMenuItem.Text = "Walking Puzzle";
-            this.walkingPuzzleToolStripMenuItem.Click += new System.EventHandler(this.walkingPuzzleToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 537);
+            this.ClientSize = new System.Drawing.Size(604, 724);
             this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
